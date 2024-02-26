@@ -2,13 +2,13 @@
 
 # A1 - Basic Cloud Infrastructure
 ## Task List
-- [ ] VPC 
-- [ ] Subnets 
-    - [ ] Private 
-    - [ ] Public 
-- [ ] Route Tables 
-- [ ] EC2 
-- [ ] RDS 
+- [x] VPC 
+- [x] Subnets 
+  - [x] Private 
+  - [x] Public 
+- [x] Route Tables 
+- [x] EC2 
+- [x] RDS 
 - [ ] Extra - (No need to write about this)
   - [ ] CloudFormation Script 
   - [ ] Make sure Nextcloud works 
