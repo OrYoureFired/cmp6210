@@ -1,0 +1,14 @@
+--- 
+- hosts: local
+  become: yes
+
+  tasks: 
+    - import_tasks: tasks/all/essential.yml
+    - import_tasks: tasks/local/services.yml
+
+- hosts: aws
+  become: yes
+
+  tasks: 
+    - import_tasks: tasks/all/essential.yml
+    - import_tasks: tasks/aws/services.yml

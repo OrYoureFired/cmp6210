@@ -1,0 +1,21 @@
+- name: Install services packages
+  apt:
+    pkg:
+    - docker
+    - docker-compose
+    state: latest
+
+- name: Add user to docker group
+  user:
+    name: "{{ username }}"
+    groups: docker
+    append: yes
+  become: yes
+
+- name: Copy local docker-compose files to server
+  copy:
+    src: docker/aws
+    dest: "/docker/compose/"
+    owner: "{{ username }}"
+    group: "{{ username }}"
+  register: copied
