@@ -10,9 +10,11 @@
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
-      config = {allowUnfree = true;};
+      config = {
+        allowUnfree = true;
+      };
     };
-  in 
+  in {
     devShells.x86_64-linux.default = pkgs.mkShell {
       nativeBuildInputs = with pkgs; [
         # Packages used to help develop these configurations
@@ -24,4 +26,5 @@
         PS1='\e[33;1m\u@\h - CMP6210: \e[34m\W\e[0m\$ '
       ''; 
     };
+  };
 }
