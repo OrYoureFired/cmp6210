@@ -11,7 +11,7 @@
 - [x] RDS 
 - [ ] Extra - (No need to write about this)
   - [ ] CloudFormation Script 
-  - [ ] Make sure Nextcloud works 
+  - [x] Make sure Nextcloud works 
 
 ## AWS Accounts
 - Testing - Tomas 
