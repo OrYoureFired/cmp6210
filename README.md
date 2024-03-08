@@ -24,3 +24,6 @@
 Ansible tasks are split into different `.yml` files within the tasks directory, the idea is to ensure setting up the webapp is reproducible. 
 
 The server will be running Debian 12, so the script is designed specifically for Debian (and Debian-based) distributions. This script will not work on any other distributions. 
+
+## Ansible Command to Run
+`ansible-playbook run.yml -K -J`

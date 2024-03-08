@@ -6,8 +6,6 @@ services:
     image: mariadb:10.6
     restart: always
     command: --transaction-isolation=READ-COMMITTED --log-bin=binlog --binlog-format=ROW
-    volumes:
-      - ${CONTAINER_FS}/nextcloud-db:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
@@ -24,8 +22,8 @@ services:
       - nextcloud-db
       - nextcloud-redis
     volumes:
-      - ${CONTAINER_FS}/nextcloud-server/:/var/www/html
-      - ${DATA_FS}/nextcloud-data/:/var/www/html/data
+      - nextcloud-server/:/var/www/html
+      - nextcloud-data/:/var/www/html/data
     environment:
       - REDIS_HOST=nextcloud-redis
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
