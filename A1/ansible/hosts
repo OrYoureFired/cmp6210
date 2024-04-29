@@ -2,4 +2,4 @@
 virtual_machine ansible_host=192.168.122.7 ansible_user=tomas ansible_connection=ssh ansible_ssh_private_key_file=keys/ansible_key
 
 [aws]
-webserver-1 ansible_host=100.24.56.80 ansible_user=admin ansible_connection=ssh ansible_ssh_private_key_file=/home/tomas/.ssh/uni-keypair.pem
+webserver-1 ansible_host=3.81.140.243 ansible_user=admin ansible_connection=ssh ansible_ssh_private_key_file=/home/tomas/.ssh/uni-keypair.pem

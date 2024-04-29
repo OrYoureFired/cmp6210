@@ -19,6 +19,7 @@
       nativeBuildInputs = with pkgs; [
         # Packages used to help develop these configurations
         ansible
+        docker-compose
       ];
 
       shellHook = ''

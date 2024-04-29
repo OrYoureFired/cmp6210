@@ -7,22 +7,15 @@ services:
     restart: always
     ports:
       - 80:80
-    links:
-      - nextcloud-redis
     volumes:
       - /containers/nextcloud-server/:/var/www/html
       - /objects/nextcloud-data/:/var/www/html/data
     environment:
-      - REDIS_HOST=nextcloud-redis
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_HOST=${MYSQL_HOST}
-
-  nextcloud-redis:
-    container_name: nextcloud-redis
-    image: redis
-    restart: always
+      
 
   watchtower:
     container_name: watchtower
@@ -33,4 +26,3 @@ services:
 
 volumes:
   nextcloud-server:
-  nextcloud-redis:
