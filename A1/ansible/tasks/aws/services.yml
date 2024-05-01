@@ -15,7 +15,7 @@
 - name: Copy local docker-compose files to server
   copy:
     src: docker/aws/
-    dest: "/docker/compose/"
+    dest: "/home/{{ username }}"
     owner: "{{ username }}"
     group: "{{ username }}"
   register: copied

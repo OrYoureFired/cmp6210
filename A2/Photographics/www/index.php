@@ -9,11 +9,6 @@
 	<body>
 		<center>
 			<a href=index.php><h1>Photographic</h1></a>
-			<ul class="navbar">
-				<li class="navbar"><a href="device.php">Device</a></li>
-				<li class="navbar"><a href="country.php">Country</a></li>
-				<li class="navbar"><a href="city.php">City</a></li>
-			</ul>
 		</center>
 		<div style="margin:auto; width:75%;">
 			<?php
